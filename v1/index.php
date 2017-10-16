@@ -16,7 +16,7 @@ $app->get('/kbzAtmList', function() {
 
     $response["error"] = false;
     $response["total"] = $count;
-    $response["kbz"] = array();
+    $response["content"] = array();
 
     while ($kbz = $result->fetch_assoc()) {
         $tmp = array();
@@ -26,7 +26,7 @@ $app->get('/kbzAtmList', function() {
         $tmp["division"] = $kbz["division"];
         $tmp["lat"] = $kbz["lat"];
         $tmp["lon"] = $kbz["lon"];
-        array_push($response["kbz"], $tmp);
+        array_push($response["content"], $tmp);
     }
     echoResponse(200, $response);
 });
@@ -40,7 +40,7 @@ $app->get('/ayaAtmList', function() {
 
     $response["error"] = false;
     $response["total"] = $count;
-    $response["aya"] = array();
+    $response["content"] = array();
 
     while ($aya = $result->fetch_assoc()) {
         $tmp = array();
@@ -50,7 +50,7 @@ $app->get('/ayaAtmList', function() {
         $tmp["division"] = $aya["division"];
         $tmp["lat"] = $aya["lat"];
         $tmp["lon"] = $aya["lon"];
-        array_push($response["aya"], $tmp);
+        array_push($response["content"], $tmp);
     }
     echoResponse(200, $response);
 });
@@ -64,7 +64,7 @@ $app->get('/cbAtmList', function() {
 
     $response["error"] = false;
     $response["total"] = $count;
-    $response["cb"] = array();
+    $response["content"] = array();
 
     while ($cb = $result->fetch_assoc()) {
         $tmp = array();
@@ -74,7 +74,7 @@ $app->get('/cbAtmList', function() {
         $tmp["division"] = $cb["division"];
         $tmp["lat"] = $cb["lat"];
         $tmp["lon"] = $cb["lon"];
-        array_push($response["cb"], $tmp);
+        array_push($response["content"], $tmp);
     }
     echoResponse(200, $response);
 });
@@ -88,7 +88,7 @@ $app->get('/agdAtmList', function() {
 
     $response["error"] = false;
     $response["total"] = $count;
-    $response["agd"] = array();
+    $response["content"] = array();
 
     while ($agd = $result->fetch_assoc()) {
         $tmp = array();
@@ -98,7 +98,7 @@ $app->get('/agdAtmList', function() {
         $tmp["division"] = $agd["division"];
         $tmp["lat"] = $agd["lat"];
         $tmp["lon"] = $agd["lon"];
-        array_push($response["agd"], $tmp);
+        array_push($response["content"], $tmp);
     }
     echoResponse(200, $response);
 });
@@ -112,7 +112,7 @@ $app->get('/uabAtmList', function() {
 
     $response["error"] = false;
     $response["total"] = $count;
-    $response["uab"] = array();
+    $response["content"] = array();
 
     while ($uab = $result->fetch_assoc()) {
         $tmp = array();
@@ -122,7 +122,7 @@ $app->get('/uabAtmList', function() {
         $tmp["division"] = $uab["division"];
         $tmp["lat"] = $uab["lat"];
         $tmp["lon"] = $uab["lon"];
-        array_push($response["uab"], $tmp);
+        array_push($response["content"], $tmp);
     }
     echoResponse(200, $response);
 });
@@ -136,7 +136,7 @@ $app->get('/mabAtmList', function() {
 
     $response["error"] = false;
     $response["total"] = $count;
-    $response["mab"] = array();
+    $response["content"] = array();
 
     while ($mab = $result->fetch_assoc()) {
         $tmp = array();
@@ -146,7 +146,7 @@ $app->get('/mabAtmList', function() {
         $tmp["division"] = $mab["division"];
         $tmp["lat"] = $mab["lat"];
         $tmp["lon"] = $mab["lon"];
-        array_push($response["mab"], $tmp);
+        array_push($response["content"], $tmp);
     }
     echoResponse(200, $response);
 });

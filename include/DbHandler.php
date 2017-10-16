@@ -25,6 +25,10 @@ class DbHandler {
                 $GetCbList = "SELECT COUNT(*) FROM cb";
                 $count = $this->calculateCount($GetCbList);
                 return $count;
+            case "agd":
+                $GetAgdList = "SELECT COUNT(*) FROM agd";
+                $count = $this->calculateCount($GetAgdList);
+                return $count;
             case "uab":
                 $GetUabList = "SELECT COUNT(*) FROM uab";
                 $count = $this->calculateCount($GetUabList);
