@@ -1,9 +1,3 @@
-<?php 
-require_once 'include/DbHandler.php';
-$db = new DbHandler();
-$count = $db->testPagination();
-echo $count;
-?>
 <!DOCTYPE html>
 <html>
     <head>

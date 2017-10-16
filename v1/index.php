@@ -7,30 +7,6 @@ require '.././libs/Slim/Slim.php';
 
 $app = new \Slim\Slim();
 
-$app->get('/test', function() {
-    $response = array();
-    $db = new DbHandler();
-
-    $result = $db->test();
-    $count = $db->getATMCount("aya");
-
-    $response["error"] = false;
-    $response["total"] = $count;
-    $response["aya"] = array();
-
-    while ($aya = $result->fetch_assoc()) {
-        $tmp = array();
-        $tmp["id"] = $aya["id"];
-        $tmp["name"] = $aya["name"];
-        $tmp["address"] = $aya["address"];
-        $tmp["division"] = $aya["division"];
-        $tmp["lat"] = $aya["lat"];
-        $tmp["lon"] = $aya["lon"];
-        array_push($response["aya"], $tmp);
-    }
-    echoResponse(200, $response);
-});
-
 $app->get('/kbzAtmList', function() {
     $response = array();
     $db = new DbHandler();
