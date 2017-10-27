@@ -1,7 +1,7 @@
 <?php
 
-require_once '../include/DbHandler.php';
-require '.././libs/Slim/Slim.php';
+require "../include/DbHandler.php";
+require ".././libs/Slim/Slim.php";
 
 \Slim\Slim::registerAutoloader();
 
